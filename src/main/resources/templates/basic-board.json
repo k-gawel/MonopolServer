@@ -1,0 +1,684 @@
+{
+  "board": [
+    {
+      "type": "CARD-GROUP",
+      "name": "START",
+      "description": "You get $200 if you cross the start and another $200 if you stand on its field",
+      "cards": [
+        {
+          "type": "GIFT",
+          "property": 200,
+          "description": "You get $200"
+        }
+      ]
+    },
+    {
+      "type": "TOWN",
+      "name": "MEDITER-RANEAN AVENNUE",
+      "region": "BROWN",
+      "part": "1/4",
+      "basicPrice": 60
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "COMMUNITY CHEST I",
+      "description": "Good luck.",
+      "cards": [
+        {
+          "type": "MOVE",
+          "property": 1,
+          "description": "Advance to START."
+        },
+        {
+          "type": "GIFT",
+          "property": 200,
+          "description": "Bank error in your favor. Collect $200."
+        },
+        {
+          "type": "CHARGE",
+          "property": 50,
+          "description": "Doctor's fees. Pay $50."
+        },
+        {
+          "type": "GIFT",
+          "property": 50,
+          "description": "From sale of stock you get $50."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "Holiday Fund matures. Receive $100."
+        },
+        {
+          "type": "GIFT",
+          "property": 20,
+          "description": "Income tax refund. Collect $20."
+        },
+        {
+          "type": "GIFT",
+          "property": 10,
+          "description": "It is your birthday. Collect $10."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "Life insurance matures – Collect $100."
+        },
+        {
+          "type": "CHARGE",
+          "property": 50,
+          "description": "Hospital Fees. Pay $50."
+        },
+        {
+          "type": "CHARGE",
+          "property": 50,
+          "description": "School fees. Pay $50."
+        },
+        {
+          "type": "GIFT",
+          "property": 25,
+          "description": "Receive $25 consultancy fee."
+        },
+        {
+          "type": "GIFT",
+          "property": 10,
+          "description": "You have won second prize in a beauty contest. Collect $10."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "You inherit $100."
+        }
+      ]
+    },
+    {
+      "type": "TOWN",
+      "name": "BALTIC AVENUE",
+      "region": "BROWN",
+      "part": "1/4",
+      "basicPrice": 60
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "INCOME TAX",
+      "description": "No money comes without a cost.",
+      "cards": [
+        {
+          "type": "CHARGE",
+          "property": 200,
+          "description": "Pay incoming tax $200"
+        }
+      ]
+    },
+    {
+      "type": "UTILITY",
+      "name": "READING RAILROAD",
+      "region": "RAILS",
+      "basicPrice": 200
+    },
+    {
+      "type": "TOWN",
+      "name": "ORIENTAL AVENUE",
+      "region": "AZURE",
+      "part": "1/4",
+      "basicPrice": 100
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "CHANCE I",
+      "description": "Good luck.",
+      "cards": [
+        {
+          "type": "MOVE",
+          "property": 0,
+          "description": "Advance to START."
+        },
+        {
+          "type": "MOVE",
+          "property": 24,
+          "description": "Advance to Illinois Ave."
+        },
+        {
+          "type": "MOVE",
+          "property":  12,
+          "description": "Advance to St. Charles Place."
+        },
+        {
+          "type": "MOVE",
+          "property": 6,
+          "description": "Advance token to nearest Utility."
+        },
+        {
+          "type": "GIFT",
+          "property": 50,
+          "description": "Bank pays you dividend of $50."
+        },
+        {
+          "type": "MOVE",
+          "property": 5,
+          "description": "Go Back Three Spaces."
+        },
+        {
+          "type": "CHARGE",
+          "property": 15,
+          "description": "Pay poor tax of $15."
+        },
+        {
+          "type": "MOVE",
+          "property": 5,
+          "description": "Take a trip to Reading Railroad."
+        },
+        {
+          "type": "MOVE",
+          "property": 39,
+          "description": "Take a walk on the Boardwalk."
+        },
+        {
+          "type": "CHARGE",
+          "property": 150,
+          "description": "You have been elected Chairman of the Board."
+        },
+        {
+          "type": "GIFT",
+          "property": 150,
+          "description": "Your building loan matures. Receive $150."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "You have won a crossword competition. Collect $100."
+        }
+      ]
+    },
+    {
+      "type": "TOWN",
+      "name": "VERMONT AVENUE",
+      "region": "AZURE",
+      "part": "1/4",
+      "basicPrice": 100
+    },
+    {
+      "type": "TOWN",
+      "name": "CONNECTICUT AVENUE",
+      "region": "AZURE",
+      "part": "1/4",
+      "basicPrice": 120
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "JAIL",
+      "description": "Not good...",
+      "cards": [
+        {
+          "type": "CHARGE",
+          "property": 150,
+          "description": "You need to pay 150 to go out of jail"
+        }
+      ]
+    },
+    {
+      "type": "TOWN",
+      "name": "ST. CHARLES PALACE",
+      "region": "PINK",
+      "part": "2/4",
+      "basicPrice": 140
+    },
+    {
+      "type": "UTILITY",
+      "name": "ELECTRIC COMPANY",
+      "region": "SUPPLIES",
+      "basicPrice": 150
+    },
+    {
+      "type": "TOWN",
+      "name": "STATES AVENUE",
+      "region": "PINK",
+      "part": "2/4",
+      "basicPrice": 140
+    },
+    {
+      "type": "TOWN",
+      "name": "VIRGINIA AVENUE",
+      "region": "PINK",
+      "part": "2/4",
+      "basicPrice": 160
+    },
+    {
+      "type": "UTILITY",
+      "name": "PENNSYLVANIA RAILROAD",
+      "region": "RAILS",
+      "basicPrice": 200
+    },
+    {
+      "type": "TOWN",
+      "name": "ST. JAMES PLACE",
+      "region": "ORANGE",
+      "part": "2/4",
+      "basicPrice": 180
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "COMMUNITY CHEST II",
+      "description": "Good luck.",
+      "cards": [
+        {
+          "type": "MOVE",
+          "property": 0,
+          "description": "Advance to START."
+        },
+        {
+          "type": "GIFT",
+          "property": 200,
+          "description": "Bank error in your favor. Collect $200."
+        },
+        {
+          "type": "CHARGE",
+          "property": 50,
+          "description": "Doctor's fees. Pay $50."
+        },
+        {
+          "type": "GIFT",
+          "property": 50,
+          "description": "From sale of stock you get $50."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "Holiday Fund matures. Receive $100."
+        },
+        {
+          "type": "GIFT",
+          "property": 20,
+          "description": "Income tax refund. Collect $20."
+        },
+        {
+          "type": "GIFT",
+          "property": 10,
+          "description": "It is your birthday. Collect $10."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "Life insurance matures – Collect $100."
+        },
+        {
+          "type": "CHARGE",
+          "property": 50,
+          "description": "Hospital Fees. Pay $50."
+        },
+        {
+          "type": "CHARGE",
+          "property": 50,
+          "description": "School fees. Pay $50."
+        },
+        {
+          "type": "GIFT",
+          "property": 25,
+          "description": "Receive $25 consultancy fee."
+        },
+        {
+          "type": "GIFT",
+          "property": 10,
+          "description": "You have won second prize in a beauty contest. Collect $10."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "You inherit $100."
+        }
+      ]
+    },
+    {
+      "type": "TOWN",
+      "name": "TENNESSEE AVENUE",
+      "region": "ORANGE",
+      "part": "2/4",
+      "basicPrice": 180
+    },
+    {
+      "type": "TOWN",
+      "name": "NEW YORK AVENUE",
+      "region": "ORANGE",
+      "part": "2/4",
+      "basicPrice": 200
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "PARKING",
+      "description": "If you want stay here you must pay $1!",
+      "cards": [
+        {
+          "type": "CHARGE",
+          "property": 1,
+          "description": "Pay $1 for parking."
+        }
+      ]
+
+    },
+    {
+      "type": "TOWN",
+      "name": "KENTUCKY AVENUE",
+      "region": "RED",
+      "part": "3/4",
+      "basicPrice": 220
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "CHANCE II",
+      "description": "Good luck.",
+      "cards": [
+          {
+            "type": "MOVE",
+            "property": 0,
+            "description": "Advance to START."
+          },
+          {
+            "type": "MOVE",
+            "property": 23,
+            "description": "Advance to Illinois Ave."
+          },
+          {
+            "type": "MOVE",
+            "property":  11,
+            "description": "Advance to St. Charles Place."
+          },
+          {
+            "type": "MOVE",
+            "property": 5,
+            "description": "Advance token to nearest Utility."
+          },
+          {
+            "type": "GIFT",
+            "property": 50,
+            "description": "Bank pays you dividend of $50."
+          },
+          {
+            "type": "MOVE",
+            "property": 19,
+            "description": "Go Back Three Spaces."
+          },
+          {
+            "type": "CHARGE",
+            "property": 15,
+            "description": "Pay poor tax of $15."
+          },
+          {
+            "type": "MOVE",
+            "property": 6,
+            "description": "Take a trip to Reading Railroad."
+          },
+          {
+            "type": "MOVE",
+            "property": 40,
+            "description": "Take a walk on the Boardwalk."
+          },
+          {
+            "type": "CHARGE",
+            "property": 150,
+            "description": "You have been elected Chairman of the Board."
+          },
+          {
+            "type": "GIFT",
+            "property": 150,
+            "description": "Your building loan matures. Receive $150."
+          },
+          {
+            "type": "GIFT",
+            "property": 100,
+            "description": "You have won a crossword competition. Collect $100."
+          }
+      ]
+    },
+    {
+      "type": "TOWN",
+      "name": "INDIANA AVENUE",
+      "region": "RED",
+      "part": "3/4",
+      "basicPrice": 220
+    },
+    {
+      "type": "TOWN",
+      "name": "ILLINOIS AVENUE",
+      "region": "RED",
+      "part": "3/4",
+      "basicPrice": 240
+    },
+    {
+      "type": "UTILITY",
+      "name": "B. & O. RAILROAD",
+      "region": "RAILS",
+      "basicPrice": 200
+    },
+    {
+      "type": "TOWN",
+      "name": "ATLANTIC AVENUE",
+      "region": "YELLOW",
+      "part": "3/4",
+      "basicPrice": 260
+    },
+    {
+      "type": "TOWN",
+      "name": "VENTNOR AVENUE",
+      "region": "YELLOW",
+      "part": "3/4",
+      "basicPrice": 260
+    },
+    {
+      "type": "UTILITY",
+      "name": "WATER WORKS",
+      "region": "SUPPLIES",
+      "basicPrice": 150
+    },
+    {
+      "type": "TOWN",
+      "name": "MARVIN GARDENS",
+      "region": "YELLOW",
+      "part": "3/4",
+      "basicPrice": 280
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "POLICEMAN",
+      "description": "Wait! What are you doing?!",
+      "cards": [
+        {
+          "type": "MOVE",
+          "property": 10,
+          "description": "You are under arrest!"
+        }
+      ]
+    },
+    {
+      "type": "TOWN",
+      "name": "PACIFIC AVENUE",
+      "region": "GREEN",
+      "part": "4/4",
+      "basicPrice": 300
+    },
+    {
+      "type": "TOWN",
+      "name": "NORTH CAROLINA AVENUE",
+      "region": "GREEN",
+      "part": "4/4",
+      "basicPrice": 300
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "COMMUNITY CHEST III",
+      "description": "Good luck.",
+      "cards": [
+        {
+          "type": "MOVE",
+          "property": 0,
+          "description": "Advance to START."
+        },
+        {
+          "type": "GIFT",
+          "property": 200,
+          "description": "Bank error in your favor. Collect $200."
+        },
+        {
+          "type": "CHARGE",
+          "property": 50,
+          "description": "Doctor's fees. Pay $50."
+        },
+        {
+          "type": "GIFT",
+          "property": 50,
+          "description": "From sale of stock you get $50."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "Holiday Fund matures. Receive $100."
+        },
+        {
+          "type": "GIFT",
+          "property": 20,
+          "description": "Income tax refund. Collect $20."
+        },
+        {
+          "type": "GIFT",
+          "property": 10,
+          "description": "It is your birthday. Collect $10."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "Life insurance matures – Collect $100."
+        },
+        {
+          "type": "CHARGE",
+          "property": 50,
+          "description": "Hospital Fees. Pay $50."
+        },
+        {
+          "type": "CHARGE",
+          "property": 50,
+          "description": "School fees. Pay $50."
+        },
+        {
+          "type": "GIFT",
+          "property": 25,
+          "description": "Receive $25 consultancy fee."
+        },
+        {
+          "type": "GIFT",
+          "property": 10,
+          "description": "You have won second prize in a beauty contest. Collect $10."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "You inherit $100."
+        }
+      ]
+    },
+    {
+      "type": "TOWN",
+      "name": "PENNSYLVANIA AVENUE",
+      "region": "GREEN",
+      "part": "4/4",
+      "basicPrice": 320
+    },
+    {
+      "type": "UTILITY",
+      "name": "SHORT LINE",
+      "region": "RAILS",
+      "basicPrice": 200
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "CHANCE III",
+      "description": "Good luck.",
+      "cards": [
+        {
+          "type": "MOVE",
+          "property": 0,
+          "description": "Advance to START."
+        },
+        {
+          "type": "MOVE",
+          "property": 24,
+          "description": "Advance to Illinois Ave."
+        },
+        {
+          "type": "MOVE",
+          "property":  11,
+          "description": "Advance to St. Charles Place."
+        },
+        {
+          "type": "MOVE",
+          "property": 5,
+          "description": "Advance token to nearest Utility."
+        },
+        {
+          "type": "GIFT",
+          "property": 50,
+          "description": "Bank pays you dividend of $50."
+        },
+        {
+          "type": "MOVE",
+          "property": 33,
+          "description": "Go Back Three Spaces."
+        },
+        {
+          "type": "CHARGE",
+          "property": 15,
+          "description": "Pay poor tax of $15."
+        },
+        {
+          "type": "MOVE",
+          "property": 5,
+          "description": "Take a trip to Reading Railroad."
+        },
+        {
+          "type": "MOVE",
+          "property": 39,
+          "description": "Take a walk on the Boardwalk."
+        },
+        {
+          "type": "CHARGE",
+          "property": 150,
+          "description": "You have been elected Chairman of the Board."
+        },
+        {
+          "type": "GIFT",
+          "property": 150,
+          "description": "Your building loan matures. Receive $150."
+        },
+        {
+          "type": "GIFT",
+          "property": 100,
+          "description": "You have won a crossword competition. Collect $100."
+        }
+      ]
+    },
+    {
+      "type": "TOWN",
+      "name": "PARK PLACE",
+      "region": "BLUE",
+      "part": "4/4",
+      "basicPrice": 350
+    },
+    {
+      "type": "CARD-GROUP",
+      "name": "LUXURY TAX",
+      "description": "You are getting too rich!",
+      "cards": [
+        {
+          "type": "CHARGE",
+          "property": 100,
+          "description": "Proletarians of all countries, unite."
+        }
+      ]
+    },
+    {
+      "type": "TOWN",
+      "name": "BOARDWALK",
+      "region": "BLUE",
+      "part": "4/4",
+      "basicPrice": 400
+    }
+  ]
+}

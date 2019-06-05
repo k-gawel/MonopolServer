@@ -1,0 +1,9 @@
+{
+  "request_type": "transaction",
+  "transaction_request_type": "init",
+  "session": "SESSION",
+  "game": "GAME",
+  "transaction": "TRANSACTION",
+  "initiator": "INITIATOR",
+  "invited": "INVITED"
+}

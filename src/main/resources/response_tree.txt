@@ -1,0 +1,23 @@
+response_type
+    game_action
+        game_action_type
+            new_player
+            new_tour
+    transaction
+        transaction_response_type
+            action
+                transaction_action_type
+                    status
+                    item
+                        add
+                        remove
+            init
+                transaction_init_type
+                    bank
+                    compulsory
+                    voluntary
+            result
+    player_action
+        player_action_type
+            leave
+            move
