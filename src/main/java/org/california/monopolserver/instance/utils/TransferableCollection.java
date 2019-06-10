@@ -36,7 +36,7 @@ public class TransferableCollection extends HashSet<Transferable> implements Com
     @Override
     public boolean contains(Object transferable) {
         return transferable instanceof Money ?
-                getMoney().compareTo((Money) transferable) >= 0 : super.contains(transferable);
+                getMoney().compareTo((Transferable) transferable) >= 0 : super.contains(transferable);
     }
 
 

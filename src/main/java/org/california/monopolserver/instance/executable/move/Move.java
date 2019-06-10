@@ -2,49 +2,51 @@ package org.california.monopolserver.instance.executable.move;
 
 import org.california.monopolserver.instance.board.board.Board;
 import org.california.monopolserver.instance.board.field.Field;
+import org.california.monopolserver.instance.executable.Executable;
 import org.california.monopolserver.instance.player.Player;
+import org.california.monopolserver.instance.utils.AbstractGameInstance;
 
 import java.util.Random;
 
-public class Move {
+public class Move extends AbstractGameInstance implements Executable {
 
+    public Field start;
     public Field destination;
     public Player player;
     public boolean crossedStart;
 
-    private Move(Player player) {
+
+    public Move(Player player, int destination) {
+        Board board = player.getBoard();
+
         this.player = player;
+        this.start = player.field();
+        this.destination = board.get(destination);
+
+        this.crossedStart = board.isStartBetween(player.field(), this.destination);
+
+        System.out.println(player.toString() + " GOUES FROM " + this.start + " TO " + this.destination);
     }
 
 
-    public static Move makeMove(Player player) {
-        Move result = new Move(player);
+    public static Move rollTheDice(Player player) {
+        int distance = new Random().nextInt(11) + 1;
 
-        Board board = player.getGame().board;
-        Field start = board.get(player);
+        int currentIndex = player.field().number;
+        int maxIndex = player.getBoard().size();
 
-        int diceRoll = new Random().nextInt(12) + 1;
-        result.destination = board.movePlayer(player, diceRoll);
+        int distanceToStart = maxIndex - currentIndex;
 
-        result.crossedStart = board.isStartBetween(start, result.destination);
+        int destination = distanceToStart >= distance ?
+                currentIndex + distance : distance - distanceToStart;
 
-        return result;
+        return new Move(player, destination);
     }
 
 
-    public static Move makeMove(Player player, int destination) {
-        Move result = new Move(player);
-
-        Board board = player.getGame().board;
-        Field start = board.get(player);
-        result.destination = board.get(destination);
-
-        start.removePlayer(player);
-        board.putPlayer(player, result.destination);
-
-        result.crossedStart = board.isStartBetween(start, result.destination);
-
-        return result;
+    @Override
+    public String getUUID() {
+        return null;
     }
 
 }

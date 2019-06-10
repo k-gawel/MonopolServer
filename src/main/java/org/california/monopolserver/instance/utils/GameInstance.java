@@ -1,5 +1,6 @@
 package org.california.monopolserver.instance.utils;
 
+import org.california.monopolserver.instance.board.board.Board;
 import org.california.monopolserver.instance.transferable.money.Money;
 import org.california.monopolserver.instance.game.Game;
 import org.california.monopolserver.model.interfaces.Identifiable;
@@ -18,6 +19,11 @@ public interface GameInstance extends Identifiable {
 
     default Money newMoney(int amount) {
         return new Money(getGame(), amount);
+    }
+
+
+    default Board getBoard() {
+        return getGame().board;
     }
 
 }

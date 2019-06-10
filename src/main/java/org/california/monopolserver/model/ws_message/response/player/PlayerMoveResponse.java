@@ -6,7 +6,7 @@ import org.california.monopolserver.utils.annotations.JSONTypeInfo;
 @JSONTypeInfo
 public class PlayerMoveResponse extends PlayerActionResponse {
 
-    final public String destination;
+    public final String destination;
 
     public PlayerMoveResponse(Move move) {
         super(move.player);

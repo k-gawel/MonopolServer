@@ -33,7 +33,6 @@ public class TourService {
         Game game = player.getGame();
 
         Tour currentTour = game.currentTour;
-
         if(currentTour == null)
             startGame(player, game);
         else
@@ -44,6 +43,8 @@ public class TourService {
     private void startGame(Player player, Game game) throws IllegalAccessException {
         if(!game.players.get(0).equals(player))
             throw new IllegalAccessException("Game admin must start game.");
+        if(game.players.size() <= 1)
+            throw new IllegalStateException("You need at least two players to start the game.");
         createAndSend(game);
     }
 

@@ -15,6 +15,13 @@ public class RestController {
 
     private final NewPlayerService newPlayerService;
 
+
+    @GetMapping("/sample-controller")
+    public String xd() {
+        return "XDDD";
+    }
+
+
     @Autowired
     public RestController(NewPlayerService newPlayerService) {
         this.newPlayerService = newPlayerService;

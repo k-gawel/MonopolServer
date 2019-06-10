@@ -2,12 +2,12 @@ package org.california.monopolserver.instance.game;
 
 public class ColorPicker {
 
-    static enum color {
-        GREEN("#00e6ac"),
-        RED("#e63900"),
-        BLUE("#1a1aff"),
-        YELLOW("#ffff1a"),
-        PINK("#ff1aff");
+    enum color {
+        GREEN("GREEN"),
+        RED("RED"),
+        BLUE("BLUE"),
+        YELLOW("YELLOW"),
+        PINK("PINK");
 
         private final String value;
 

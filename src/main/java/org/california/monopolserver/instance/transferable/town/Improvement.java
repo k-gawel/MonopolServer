@@ -55,7 +55,7 @@ public class Improvement extends AbstractGameInstance implements Transferable, G
             receiver.properties.add(this.getBasicPrice());
         }
 
-        System.out.println(this.town.getPattern().getName() + " transfered from " + sender.getName() + " to " + receiver.getName() + " game: " + game.getUUID());
+        System.out.println(this.town.getPattern().getName() + " transfered from " + sender.name + " to " + receiver.name + " game: " + game.getUUID());
     }
 
 

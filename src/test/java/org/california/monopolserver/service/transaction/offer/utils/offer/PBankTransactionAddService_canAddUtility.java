@@ -5,9 +5,9 @@ import org.california.monopolserver.instance.executable.transaction.BankTransact
 import org.california.monopolserver.instance.game.Game;
 import org.california.monopolserver.instance.player.Player;
 import org.california.monopolserver.instance.transferable.utility.Utility;
+import org.california.monopolserver.utils.InstanceMock;
 import org.junit.Before;
 import org.junit.Test;
-import org.california.monopolserver.utils.InstanceMock;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -47,8 +47,6 @@ public class PBankTransactionAddService_canAddUtility {
         assertTrue(utility.standsOn(player));
         assertTrue(service.canAdd(transaction, game.bank, utility));
     }
-
-
 
 
 }

@@ -6,7 +6,7 @@ import org.california.monopolserver.instance.game.Game;
 import org.california.monopolserver.instance.utils.GameInstance;
 import org.california.monopolserver.model.interfaces.Transferable;
 
-public class Money extends AbstractGameInstance implements Comparable<Money>, Transferable {
+public class Money extends AbstractGameInstance implements Transferable {
 
     private int amount;
     private Player owner;
@@ -74,13 +74,6 @@ public class Money extends AbstractGameInstance implements Comparable<Money>, Tr
         int part = amount / divider;
         return new Money(game, part);
     }
-
-
-    @Override
-    public int compareTo(Money money) {
-        return Integer.compare(amount, money.amount);
-    }
-
 
     @Override
     public Player getOwner() {

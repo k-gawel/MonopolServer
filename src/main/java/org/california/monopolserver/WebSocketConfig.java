@@ -25,8 +25,10 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer{
         registry.addEndpoint("/game-socket")
                 .setAllowedOrigins("*");
 
-
     }
+
+
+
 
 
 }

@@ -72,8 +72,6 @@ public class Town extends AbstractGameInstance implements Groupable, Chargeable,
             this.improvements.clear();
         else
             this.improvements.forEach(i -> i.owner = receiver);
-
-        System.out.println(this.pattern.getName() + " transfered from " + sender.getName() + " to " + receiver.getName() + " game: " + game.getUUID());
     }
 
 

@@ -6,8 +6,6 @@ import org.california.monopolserver.instance.game.Game;
 import org.california.monopolserver.instance.game.GameBuilder;
 import org.california.monopolserver.instance.player.Player;
 import org.california.monopolserver.instance.player.Session;
-import org.california.monopolserver.instance.transferable.town.Town;
-import org.california.monopolserver.instance.transferable.town.TownRegion;
 import org.california.monopolserver.model.dto.game.GameDto;
 import org.california.monopolserver.model.dto.game.GameLink;
 import org.california.monopolserver.model.ws_message.response.game.NewPlayerResponse;
@@ -62,15 +60,7 @@ public class NewPlayerService {
     public Entry<String, GameDto> createGame(@NotEmpty String playerName) throws GameException {
         Game game = GameBuilder.create(BoardBuilder.BoardType.BASIC_BOARD);
         Player player = new Player(game, playerName);
-
-        ///TODO DELETE AFTER TESTS
-
-        /////
-        TownRegion freeRegion = game.bank.properties.get(Town.class).stream().map(Town::getGroup).filter(g -> g.getOwner() == null).findFirst().get();
-        freeRegion.getComponents().forEach(t -> t.transfer(game.bank, player));
-        /////
-
-
+        GameBuilder.addPlayer(player);
         return getGame(player, game);
     }
 
@@ -79,10 +69,10 @@ public class NewPlayerService {
         Game game = GameRegistry.getByUuidO(gameUuid)
                 .orElseThrow(() -> new IllegalArgumentException("Game doesn't exists. " + gameUuid));
         Player player = new Player(game, playerName);
+        GameBuilder.addPlayer(player);
 
-        NewPlayerResponse message = new NewPlayerResponse(player);
-        messageTemplate.sendMessage(message);
 
+        messageTemplate.sendMessage(new NewPlayerResponse(player));
         return getGame(player, game);
     }
 

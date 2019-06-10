@@ -1,35 +1,33 @@
 package org.california.monopolserver.instance.player;
 
+import org.california.monopolserver.instance.board.field.Field;
 import org.california.monopolserver.instance.game.ColorPicker;
 import org.california.monopolserver.instance.game.Game;
-import org.california.monopolserver.instance.utils.TransferableCollection;
-import org.california.monopolserver.instance.transferable.money.Money;
 import org.california.monopolserver.instance.utils.AbstractGameInstance;
+import org.california.monopolserver.instance.utils.TransferableCollection;
 
-public class Player extends AbstractGameInstance {
+public class Player extends AbstractGameInstance implements Comparable<Player> {
 
     public final String session = java.util.UUID.randomUUID().toString();
-    public String name;
-    public String color;
-    public TransferableCollection properties;
+    public final String name;
+    public final String color;
+    public final TransferableCollection properties;
 
     public Player(Game game, String name) {
         super(game);
-
-        this.game.addPlayer(this);
         this.name = name;
         this.color = ColorPicker.getNextColor(game);
         this.properties = new TransferableCollection(this);
-        Money startMoney = new Money(game, game.startMoney);
-        this.properties.add(startMoney);
     }
 
-    protected Player(Game game) {
-        super(game);
+    protected Player(Game game, String name, String color) {
+        this.game = game;
+        this.name = name;
+        this.color = color;
+        this.properties = new TransferableCollection(this);
     }
 
-
-    private String createSession() {
+    private String session() {
         return new StringBuilder()
                 .append(game.getUUID()).append("|")
                 .append(this.getUUID()).append("|")
@@ -38,13 +36,8 @@ public class Player extends AbstractGameInstance {
     }
 
 
-    public String getName() {
-        return name;
-    }
-
-
-    public String getColor() {
-        return color;
+    public Field field() {
+        return getBoard().get(this);
     }
 
 
@@ -58,4 +51,8 @@ public class Player extends AbstractGameInstance {
         return "[ " + name + ", " + color + ", " + getUUID() + " ]";
     }
 
+    @Override
+    public int compareTo(Player o) {
+        return properties.compareTo(o.properties);
+    }
 }

@@ -35,8 +35,13 @@ public class Utility extends AbstractGameInstance implements Landable, Groupable
 
     @Override
     public Money getCharge() {
-        int charge = this.region.playersUtilities(owner) / 4 * pattern.getBasicPrice();
+        int charge = pattern.getBasicPrice() / region.getComponents().size() * region.playersUtilities(getOwner());
         return newMoney(charge);
+    }
+
+
+    public static int getChargeOf(int pOwns, int basicCharge) {
+        return basicCharge / 4 * pOwns;
     }
 
 
@@ -62,7 +67,7 @@ public class Utility extends AbstractGameInstance implements Landable, Groupable
         this.owner = receiver;
         receiver.properties.add(this);
 
-        System.out.println(this.pattern.getName() + " transfered from " + sender.getName() + " to " + receiver.getName() + " game: " + game.getUUID());
+        System.out.println(this.pattern.getName() + " transfered from " + sender.name + " to " + receiver.name + " game: " + game.getUUID());
     }
 
 

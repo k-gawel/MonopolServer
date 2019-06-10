@@ -1,12 +1,11 @@
 package org.california.monopolserver.model.ws_message.response.transaction.result;
 
 import org.california.monopolserver.instance.executable.transaction.TransactionResult;
-import org.california.monopolserver.instance.transferable.money.BankMoney;
 import org.california.monopolserver.instance.transferable.money.Money;
 import org.california.monopolserver.model.interfaces.Identifiable;
 import org.california.monopolserver.model.interfaces.Transferable;
-import org.california.monopolserver.utils.annotations.JSONTypeInfo;
 import org.california.monopolserver.model.ws_message.response.transaction.TransactionResponse;
+import org.california.monopolserver.utils.annotations.JSONTypeInfo;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -25,11 +24,6 @@ public class TransactionResultResponse extends TransactionResponse {
 
     public TransactionResultResponse(TransactionResult result) {
         super(result.transaction);
-
-        System.out.println("TransactionResulRespone");
-        System.out.println("INITIATOR MONEY " + result.initiatorOffer.getMoney());
-        System.out.println("INVITED MONEY " + result.invitedOffer.getMoney() + " ARE INSTANCE OF BANK MONEY " + (result.invitedOffer.getMoney() instanceof BankMoney));
-
 
         this.initiator = result.initiator.getUUID();
         this.invited = result.invited.getUUID();

@@ -16,8 +16,8 @@ public class PlayerDto extends InstanceDto {
         super(player);
 
         this.type = player instanceof Bank ? "bank" : "player";
-        this.name = player.getName();
-        this.color = player.getColor();
+        this.name = player.name;
+        this.color = player.color;
         this.money = new MoneyDto(player.properties.getMoney());
     }
 

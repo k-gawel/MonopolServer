@@ -2,12 +2,11 @@ package org.california.monopolserver.service.transaction.offer.utils.offer;
 
 import org.california.monopolserver.instance.executable.transaction.BankTransaction;
 import org.california.monopolserver.instance.player.Player;
-import org.california.monopolserver.instance.utils.TransferableCollection;
-import org.california.monopolserver.instance.transferable.money.Money;
 import org.california.monopolserver.instance.transferable.town.Improvement;
 import org.california.monopolserver.instance.transferable.town.Town;
 import org.california.monopolserver.instance.transferable.town.TownRegion;
 import org.california.monopolserver.instance.transferable.utility.Utility;
+import org.california.monopolserver.instance.utils.TransferableCollection;
 import org.california.monopolserver.model.interfaces.Transferable;
 import org.california.monopolserver.service.utils.TransactionOfferUtils;
 import org.california.monopolserver.service.utils.TransferableCollectionUtils;
@@ -36,9 +35,6 @@ class PBankTransactionAddService {
         }
     }
 
-    private boolean canAdd(BankTransaction transaction, Player side, Money money) {
-        return side.properties.contains(money);
-    }
 
     private boolean canAdd(BankTransaction transaction, Player side, Town town) {
         return transaction.getInitiator().equals(side) ?

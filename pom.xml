@@ -8,17 +8,19 @@
         <version>2.1.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>org.california</groupId>
     <artifactId>monopol-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2</version>
     <packaging>war</packaging>
     <name>monopol-server</name>
     <description>Monopol server.</description>
 
     <properties>
-        <java.version>12</java.version>
+        <java.version>10</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <start-class>org.california.monopolserver.Application</start-class>
     </properties>
-
 
     <dependencies>
 
@@ -45,11 +47,6 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>
-        </dependency>
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -76,6 +73,12 @@
             <version>LATEST</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -84,7 +87,30 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://91.134.142.39:8080/manager/text</url>
+                    <server>TomcatServer</server>
+                    <path>/monopol</path>
+                    <update>true</update>
+                    <username>admin-kamil</username>
+                    <password>kamilek123</password>
+                </configuration>
+            </plugin>
         </plugins>
+
     </build>
 
 </project>

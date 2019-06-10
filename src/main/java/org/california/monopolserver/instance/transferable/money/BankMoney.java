@@ -2,6 +2,7 @@ package org.california.monopolserver.instance.transferable.money;
 
 import org.california.monopolserver.instance.player.Bank;
 import org.california.monopolserver.instance.player.Player;
+import org.california.monopolserver.model.interfaces.Transferable;
 
 public class BankMoney extends Money {
 
@@ -37,7 +38,7 @@ public class BankMoney extends Money {
     }
 
     @Override
-    public int compareTo(Money money) {
+    public int compareTo(Transferable o) {
         return 1;
     }
 

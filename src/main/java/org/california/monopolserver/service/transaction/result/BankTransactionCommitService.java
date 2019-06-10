@@ -32,7 +32,8 @@ public class BankTransactionCommitService {
     //returns false if player can not afford transaction
     private boolean addDifferenceToTransaction(BankTransaction transaction) {
         TransferableCollection playerOffer = transaction.getInitiatorOffer();
-        TransferableCollection bankOffer = transaction.getInvitedOffer();
+        TransferableCollection bankOffer   = transaction.getInvitedOffer();
+
 
         int difference = playerOffer.getPrice().intValue() - bankOffer.getPrice().intValue();
 

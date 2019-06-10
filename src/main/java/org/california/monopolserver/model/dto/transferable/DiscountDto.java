@@ -15,7 +15,6 @@ public class DiscountDto extends TransferableDto {
 
     public DiscountDto(Discount discount) {
         super(discount);
-        System.out.println("DISCOUNT DTO CREATE");
         this.owner = discount.getOwner().getUUID();
         this.end_tour = discount.getEndTour();
         this.value = discount.getValue();
@@ -31,7 +30,6 @@ public class DiscountDto extends TransferableDto {
         return "DiscountDto{" +
                 "discount_type='" + discount_type + '\'' +
                 ", owner='" + owner + '\'' +
-                ", chargeable_type='" + chargeable_type + '\'' +
                 ", chargeable='" + chargeable + '\'' +
                 ", value=" + value +
                 ", end_tour=" + end_tour +

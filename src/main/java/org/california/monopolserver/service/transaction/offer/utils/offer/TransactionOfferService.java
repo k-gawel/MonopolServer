@@ -82,6 +82,8 @@ public class TransactionOfferService {
                 .orElse(null);
     }
 
+
+
     private static boolean isProperMethod(Method method) {
         try {
             return method.getParameters().length == 3

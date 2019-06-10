@@ -29,32 +29,21 @@ class PTransactionAddService {
     public Optional<Transferable> add(Transaction transaction, Player side, Transferable transferable) {
         if(!canAdd(transaction, side, transferable))
             return Optional.empty();
-
+        
         boolean result = transferable instanceof Money ?
                 transaction.getOffer(side).setMoney((Money) transferable) : transaction.getOffer(side).add(transferable);
-
 
         return result ? Optional.of(transferable) : Optional.empty();
     }
 
 
     public boolean canAdd(Transaction transaction, Player side, Transferable transferable)  {
-//        boolean a = GameInstance.sameGame(transaction, side, transferable);
-//        boolean b = side.properties.contains(transferable);
-//        boolean c = !TransactionOfferUtils.bothOffersWithoutMoney(transaction).contains(transferable);
-//        boolean d = (transaction instanceof BankTransaction ?
-//                btAddService.canAdd((BankTransaction) transaction, side, transferable) :
-//                ptAddService.canAdd(transaction, side, transferable));
-//
-//        System.out.println(a + ", " + b + ", " + c + ", " + d);
-//
-//        return a && b && c && d;
-        return GameInstance.sameGame(transaction, side, transferable)
+;       return GameInstance.sameGame(transaction, side, transferable)
                 && side.properties.contains(transferable)
                 && !TransactionOfferUtils.bothOffersWithoutMoney(transaction).contains(transferable)
                 && (transaction instanceof BankTransaction ?
-                btAddService.canAdd((BankTransaction) transaction, side, transferable) :
-                ptAddService.canAdd(transaction, side, transferable));
+                    btAddService.canAdd((BankTransaction) transaction, side, transferable) :
+                    ptAddService.canAdd(transaction, side, transferable));
     }
 
 

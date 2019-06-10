@@ -9,7 +9,9 @@ import org.california.monopolserver.model.pattern.landable.utility.UtilityRegion
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.util.ResourceUtils;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -37,7 +39,16 @@ public class BasicBoardPatternBuilder extends BoardPatternBuilder {
     private String getJsonString() {
         StringBuilder jsonStringBuilder = new StringBuilder();
 
-        try(Stream<String> stream = Files.lines(Paths.get("/home/kamil/Projects/Monopol/Monopol-Server/src/main/resources/templates/basic-board.json"))) {
+        String path;
+
+        try {
+            path = ResourceUtils.getURL("classpath:templates/basic-board.json").getPath();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return "{}";
+        }
+
+        try(Stream<String> stream = Files.lines(Paths.get(path))) {
             stream.forEach(s -> jsonStringBuilder.append(s).append("\n"));
         } catch (IOException e) {
             e.printStackTrace();

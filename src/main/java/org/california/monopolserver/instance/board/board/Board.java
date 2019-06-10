@@ -55,12 +55,14 @@ public class Board extends ArrayList<Field> implements Identifiable, GameInstanc
     }
 
 
+
     public Field putPlayer(Player player) {
         return putPlayer(player, getStart());
     }
 
 
     public Field putPlayer(Player player, Field field) {
+        removePlayer(player);
         field.getPlayers().add(player);
         return field;
     }
@@ -83,15 +85,12 @@ public class Board extends ArrayList<Field> implements Identifiable, GameInstanc
 
 
     public Field goOf(Field start, int distance) {
-        if(distance > size())
-            throw new IllegalStateException("Board cannot be doubled");
 
         int distanceToStart = size() - start.getNumber();
 
-        if(distanceToStart > distance)
-            return get(start.getNumber() + distance);
-        else
-            return get(distance - distanceToStart);
+        return distanceToStart > distance ?
+            get(start.getNumber() + distance) :
+            get(distance - distanceToStart);
     }
 
 

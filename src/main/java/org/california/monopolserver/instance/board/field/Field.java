@@ -1,5 +1,6 @@
 package org.california.monopolserver.instance.board.field;
 
+import org.california.monopolserver.instance.executable.Executable;
 import org.california.monopolserver.instance.game.Game;
 import org.california.monopolserver.instance.player.Player;
 import org.california.monopolserver.instance.utils.GameInstance;
@@ -25,6 +26,8 @@ public abstract class Field extends Instance implements GameInstance {
 
     public abstract Landable getLandable();
 
+    public abstract Executable land(Player player);
+
     public boolean removePlayer(Player player) {
         return players.remove(player);
     }
@@ -42,4 +45,8 @@ public abstract class Field extends Instance implements GameInstance {
         return game;
     }
 
+    @Override
+    public String toString() {
+        return "[ " + number + ": " + getLandable().toString() + " ]";
+    }
 }
