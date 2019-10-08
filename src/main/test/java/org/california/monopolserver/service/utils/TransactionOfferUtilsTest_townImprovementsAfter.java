@@ -7,9 +7,9 @@ import org.california.monopolserver.instance.player.Bank;
 import org.california.monopolserver.instance.player.Player;
 import org.california.monopolserver.instance.transferable.town.Improvement;
 import org.california.monopolserver.instance.transferable.town.Town;
+import org.california.monopolserver.utils.InstanceMock;
 import org.junit.Before;
 import org.junit.Test;
-import org.california.monopolserver.utils.InstanceMock;
 
 import java.util.Arrays;
 import java.util.Collection;

@@ -7,12 +7,12 @@ import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.module.SimpleModule;
-import org.california.monopolserver.utils.serialization.Deserializer;
-import org.california.monopolserver.utils.serialization.JSONMapper;
-import org.california.monopolserver.utils.serialization.Serializer;
 import org.california.monopolserver.model.ws_message.request.RequestMessage;
 import org.california.monopolserver.model.ws_message.request.transaction.TransactionRequest;
 import org.california.monopolserver.model.ws_message.request.transaction.init.TransactionInitRequest;
+import org.california.monopolserver.utils.serialization.Deserializer;
+import org.california.monopolserver.utils.serialization.JSONMapper;
+import org.california.monopolserver.utils.serialization.Serializer;
 import org.junit.Test;
 
 import java.io.IOException;
