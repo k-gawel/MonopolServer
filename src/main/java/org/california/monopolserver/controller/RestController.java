@@ -55,15 +55,12 @@ public class RestController {
 
 
     @PostMapping("/game/join")
-    public ResponseEntity joinGame(
-            @RequestParam("game_uuid") String gameUuid,
-            @RequestParam("player_name") String playerName
-    ) throws GameException {
+    public ResponseEntity joinGame(@RequestParam("game_uuid") String gameUuid,
+                                   @RequestParam("player_name") String playerName) throws GameException {
+
         Object result = newPlayerService.joinGame(gameUuid, playerName);
 
-        return ResponseEntity
-                .status(HttpStatus.OK)
-                .body(result);
+        return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
 

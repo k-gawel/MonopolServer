@@ -131,7 +131,7 @@ public class BasicBoardPatternBuilder extends BoardPatternBuilder {
         String description = json.getString("description");
         JSONArray cards = json.getJSONArray("cards");
 
-        CardGroupPattern result = new CardGroupPattern(name, description);
+        CardGroupPattern result = new CardGroupPattern(name, description, getColor(json));
 
         for(Object jsonCardObject : cards) {
             JSONObject jsonCard = (JSONObject) jsonCardObject;
@@ -147,7 +147,7 @@ public class BasicBoardPatternBuilder extends BoardPatternBuilder {
         String regionName = json.getString("region");
         int basicPrice = json.getInt("basicPrice");
 
-        return new TownPattern(getTownRegion(regionName), name, basicPrice);
+        return new TownPattern(getTownRegion(regionName), name, basicPrice, getColor(json));
     }
 
 
@@ -156,7 +156,18 @@ public class BasicBoardPatternBuilder extends BoardPatternBuilder {
         String regionName = json.getString("region");
         int basicPrice = json.getInt("basicPrice");
 
-        return new UtilityPattern(getUtilityRegion(regionName), name, basicPrice);
+        return new UtilityPattern(getUtilityRegion(regionName), name, basicPrice, getColor(json));
+    }
+
+
+    private int[] getColor(JSONObject json) {
+        JSONArray array = json.getJSONArray("color");
+        if(array == null) return null;
+        int[] result = new int[3];
+        for(int i = 0; i < array.length(); i++) {
+            result[i] = array.optInt(i);
+        }
+        return result;
     }
 
 

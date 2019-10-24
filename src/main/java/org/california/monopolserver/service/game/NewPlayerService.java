@@ -34,7 +34,6 @@ public class NewPlayerService {
 
 
 
-
     // Session Id, GameDto
     public Entry<String, GameDto> getGame(Player player, Game game) throws GameException {
         String session  = new Session(player).toString();
@@ -68,9 +67,10 @@ public class NewPlayerService {
     public Entry<String, GameDto> joinGame(@NotEmpty String gameUuid, @NotEmpty String playerName) throws GameException {
         Game game = GameRegistry.getByUuidO(gameUuid)
                 .orElseThrow(() -> new IllegalArgumentException("Game doesn't exists. " + gameUuid));
+
+
         Player player = new Player(game, playerName);
         GameBuilder.addPlayer(player);
-
 
         messageTemplate.sendMessage(new NewPlayerResponse(player));
         return getGame(player, game);

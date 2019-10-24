@@ -39,16 +39,14 @@ public class TransactionStatusService {
         Player side   = GameRegistry.getPlayerByUuid(request.side);
         Player player = GameRegistry.getPlayerByUuid(new Session(request.session).playerUuid);
 
-        if(!side.equals(player)) {
+        if(!side.equals(player))
             throw new IllegalAccessException("Player can only set his own status");
-        }
-
 
         setStatus(transaction, side, request.status);
     }
 
 
-    void setStatus(Transaction transaction, Player side, boolean status) {
+    private void setStatus(Transaction transaction, Player side, boolean status) {
         transaction.setStatus(side, status);
 
         if(transaction.isAccepted() != null)
@@ -58,7 +56,7 @@ public class TransactionStatusService {
     }
 
 
-    void sendMessage(Transaction transaction, Player side, boolean status) {
+    private void sendMessage(Transaction transaction, Player side, boolean status) {
         Collection<TransactionOperations> operations = offerService.createInfo(transaction);
         TransactionStatusResponse response = new TransactionStatusResponse(transaction, side, status, operations);
         messageTemplate.sendMessage(response);

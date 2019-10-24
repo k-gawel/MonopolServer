@@ -10,19 +10,22 @@
           "property": 200,
           "description": "You get $200"
         }
-      ]
+      ],
+      "color": [0, 0, 0]
     },
     {
       "type": "TOWN",
       "name": "MEDITER-RANEAN AVENNUE",
       "region": "BROWN",
       "part": "1/4",
-      "basicPrice": 60
+      "basicPrice": 60,
+      "color": [102, 51, 0]
     },
     {
       "type": "CARD-GROUP",
       "name": "COMMUNITY CHEST I",
       "description": "Good luck.",
+      "color": [0, 76, 153],
       "cards": [
         {
           "type": "MOVE",
@@ -96,12 +99,14 @@
       "name": "BALTIC AVENUE",
       "region": "BROWN",
       "part": "1/4",
-      "basicPrice": 60
+      "basicPrice": 60,
+      "color": [102, 51, 0]
     },
     {
       "type": "CARD-GROUP",
       "name": "INCOME TAX",
       "description": "No money comes without a cost.",
+      "color": [0, 204, 0],
       "cards": [
         {
           "type": "CHARGE",
@@ -114,19 +119,22 @@
       "type": "UTILITY",
       "name": "READING RAILROAD",
       "region": "RAILS",
-      "basicPrice": 200
+      "basicPrice": 200,
+      "color": [0, 0, 0]
     },
     {
       "type": "TOWN",
       "name": "ORIENTAL AVENUE",
-      "region": "AZURE",
+      "region": "VIOLET",
       "part": "1/4",
-      "basicPrice": 100
+      "basicPrice": 100,
+      "color": [76, 0, 153]
     },
     {
       "type": "CARD-GROUP",
       "name": "CHANCE I",
       "description": "Good luck.",
+      "color": [204, 0, 102],
       "cards": [
         {
           "type": "MOVE",
@@ -193,21 +201,24 @@
     {
       "type": "TOWN",
       "name": "VERMONT AVENUE",
-      "region": "AZURE",
+      "region": "VIOLET",
       "part": "1/4",
-      "basicPrice": 100
+      "basicPrice": 100,
+      "color": [76, 0, 153]
     },
     {
       "type": "TOWN",
       "name": "CONNECTICUT AVENUE",
-      "region": "AZURE",
+      "region": "VIOLET",
       "part": "1/4",
-      "basicPrice": 120
+      "basicPrice": 120,
+      "color": [76, 0, 153]
     },
     {
       "type": "CARD-GROUP",
       "name": "JAIL",
       "description": "Not good...",
+      "color": [255, 128, 0],
       "cards": [
         {
           "type": "CHARGE",
@@ -221,12 +232,14 @@
       "name": "ST. CHARLES PALACE",
       "region": "PINK",
       "part": "2/4",
-      "basicPrice": 140
+      "basicPrice": 140,
+      "color": [204, 0, 204]
     },
     {
       "type": "UTILITY",
       "name": "ELECTRIC COMPANY",
       "region": "SUPPLIES",
+      "color": [255, 255, 0],
       "basicPrice": 150
     },
     {
@@ -234,32 +247,37 @@
       "name": "STATES AVENUE",
       "region": "PINK",
       "part": "2/4",
-      "basicPrice": 140
+      "basicPrice": 140,
+      "color": [204, 0, 204]
     },
     {
       "type": "TOWN",
       "name": "VIRGINIA AVENUE",
       "region": "PINK",
       "part": "2/4",
-      "basicPrice": 160
+      "basicPrice": 160,
+      "color": [204, 0, 204]
     },
     {
       "type": "UTILITY",
       "name": "PENNSYLVANIA RAILROAD",
       "region": "RAILS",
-      "basicPrice": 200
+      "basicPrice": 200,
+      "color": [0, 0, 0]
     },
     {
       "type": "TOWN",
       "name": "ST. JAMES PLACE",
       "region": "ORANGE",
       "part": "2/4",
-      "basicPrice": 180
+      "basicPrice": 180,
+      "color": [255, 128, 0]
     },
     {
       "type": "CARD-GROUP",
       "name": "COMMUNITY CHEST II",
       "description": "Good luck.",
+      "color": [0, 76, 153],
       "cards": [
         {
           "type": "MOVE",
@@ -333,19 +351,22 @@
       "name": "TENNESSEE AVENUE",
       "region": "ORANGE",
       "part": "2/4",
-      "basicPrice": 180
+      "basicPrice": 180,
+      "color": [255, 128, 0]
     },
     {
       "type": "TOWN",
       "name": "NEW YORK AVENUE",
       "region": "ORANGE",
       "part": "2/4",
-      "basicPrice": 200
+      "basicPrice": 200,
+      "color": [255, 128, 0]
     },
     {
       "type": "CARD-GROUP",
       "name": "PARKING",
       "description": "If you want stay here you must pay $1!",
+      "color": [76, 0, 153],
       "cards": [
         {
           "type": "CHARGE",
@@ -353,19 +374,20 @@
           "description": "Pay $1 for parking."
         }
       ]
-
     },
     {
       "type": "TOWN",
       "name": "KENTUCKY AVENUE",
       "region": "RED",
       "part": "3/4",
-      "basicPrice": 220
+      "basicPrice": 220,
+      "color": [204, 0, 0]
     },
     {
       "type": "CARD-GROUP",
       "name": "CHANCE II",
       "description": "Good luck.",
+      "color": [0, 102, 204],
       "cards": [
           {
             "type": "MOVE",
@@ -434,39 +456,45 @@
       "name": "INDIANA AVENUE",
       "region": "RED",
       "part": "3/4",
-      "basicPrice": 220
+      "basicPrice": 220,
+      "color": [204, 0, 0]
     },
     {
       "type": "TOWN",
       "name": "ILLINOIS AVENUE",
       "region": "RED",
       "part": "3/4",
-      "basicPrice": 240
+      "basicPrice": 240,
+      "color": [204, 0, 0]
     },
     {
       "type": "UTILITY",
       "name": "B. & O. RAILROAD",
       "region": "RAILS",
-      "basicPrice": 200
+      "basicPrice": 200,
+      "color": [0, 0, 0]
     },
     {
       "type": "TOWN",
       "name": "ATLANTIC AVENUE",
       "region": "YELLOW",
       "part": "3/4",
-      "basicPrice": 260
+      "basicPrice": 260,
+      "color": [255, 255, 0]
     },
     {
       "type": "TOWN",
       "name": "VENTNOR AVENUE",
       "region": "YELLOW",
       "part": "3/4",
-      "basicPrice": 260
+      "basicPrice": 260,
+      "color": [255, 255, 0]
     },
     {
       "type": "UTILITY",
       "name": "WATER WORKS",
       "region": "SUPPLIES",
+      "color": [0, 0, 255],
       "basicPrice": 150
     },
     {
@@ -474,12 +502,14 @@
       "name": "MARVIN GARDENS",
       "region": "YELLOW",
       "part": "3/4",
-      "basicPrice": 280
+      "basicPrice": 280,
+      "color": [255, 255, 0]
     },
     {
       "type": "CARD-GROUP",
       "name": "POLICEMAN",
       "description": "Wait! What are you doing?!",
+      "color": [255, 0, 0],
       "cards": [
         {
           "type": "MOVE",
@@ -493,19 +523,22 @@
       "name": "PACIFIC AVENUE",
       "region": "GREEN",
       "part": "4/4",
-      "basicPrice": 300
+      "basicPrice": 300,
+      "color": [0, 204, 0]
     },
     {
       "type": "TOWN",
       "name": "NORTH CAROLINA AVENUE",
       "region": "GREEN",
       "part": "4/4",
-      "basicPrice": 300
+      "basicPrice": 300,
+      "color": [0, 204, 0]
     },
     {
       "type": "CARD-GROUP",
       "name": "COMMUNITY CHEST III",
       "description": "Good luck.",
+      "color": [0, 76, 153],
       "cards": [
         {
           "type": "MOVE",
@@ -579,18 +612,21 @@
       "name": "PENNSYLVANIA AVENUE",
       "region": "GREEN",
       "part": "4/4",
-      "basicPrice": 320
+      "basicPrice": 320,
+      "color": [0, 204, 0]
     },
     {
       "type": "UTILITY",
       "name": "SHORT LINE",
       "region": "RAILS",
-      "basicPrice": 200
+      "basicPrice": 200,
+      "color": [0, 0, 0]
     },
     {
       "type": "CARD-GROUP",
       "name": "CHANCE III",
       "description": "Good luck.",
+      "color": [255, 128, 0],
       "cards": [
         {
           "type": "MOVE",
@@ -659,12 +695,14 @@
       "name": "PARK PLACE",
       "region": "BLUE",
       "part": "4/4",
-      "basicPrice": 350
+      "basicPrice": 350,
+      "color": [0, 0, 204]
     },
     {
       "type": "CARD-GROUP",
       "name": "LUXURY TAX",
       "description": "You are getting too rich!",
+      "color": [255, 255, 0],
       "cards": [
         {
           "type": "CHARGE",
@@ -678,7 +716,8 @@
       "name": "BOARDWALK",
       "region": "BLUE",
       "part": "4/4",
-      "basicPrice": 400
+      "basicPrice": 400,
+      "color": [0, 0, 204]
     }
   ]
 }

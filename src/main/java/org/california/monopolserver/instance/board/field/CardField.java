@@ -23,7 +23,6 @@ public class CardField extends Field {
         this.cardGroup = cardGroup;
     }
 
-
     @Override
     public CardGroup getLandable() {
         return cardGroup;

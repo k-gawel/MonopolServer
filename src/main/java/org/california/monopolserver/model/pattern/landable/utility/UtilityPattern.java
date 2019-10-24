@@ -6,14 +6,15 @@ import org.california.monopolserver.model.pattern.landable.LandablePattern;
 
 import java.util.Objects;
 
-public class UtilityPattern implements ChargeablePattern, Groupable, LandablePattern {
+public class UtilityPattern extends LandablePattern implements ChargeablePattern, Groupable {
 
     private UtilityRegionPattern region;
     private String name;
     private int basicPrice;
 
 
-    public UtilityPattern(UtilityRegionPattern region, String name, int basicPrice) {
+    public UtilityPattern(UtilityRegionPattern region, String name, int basicPrice, int[] color) {
+        super(color);
         this.region = region;
         this.name = name;
         this.basicPrice = basicPrice;

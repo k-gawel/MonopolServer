@@ -50,12 +50,12 @@ public abstract class Transaction extends AbstractGameInstance implements Execut
 
 
     public abstract void setStatus(Player side, boolean status) throws NotSideOfTransactionException;
+
     public Boolean isAccepted() {
-        if(java.lang.Boolean.FALSE.equals(getInitiatorStatus()) || java.lang.Boolean.FALSE.equals(getInvitedStatus()))
+        if(Boolean.FALSE.equals(getInitiatorStatus()) || Boolean.FALSE.equals(getInvitedStatus()))
             return false;
         else
-            return Boolean.TRUE.equals(getInitiatorStatus()) && Boolean.TRUE.equals(getInvitedStatus()) ?
-                    true : null;
+            return Boolean.TRUE.equals(getInitiatorStatus()) && Boolean.TRUE.equals(getInvitedStatus()) ? true : null;
     }
 
 

@@ -11,6 +11,7 @@ public class UtilityDto extends TransferableDto {
     public String region;
     public String name;
     public int price;
+    public int[] color;
 
     public UtilityDto(Utility utility) {
         super(utility);
@@ -19,6 +20,7 @@ public class UtilityDto extends TransferableDto {
         this.region = utility.getGroup().getUUID();
         this.name = utility.getPattern().getName();
         this.price = utility.getBasicPrice().getBasicPrice().intValue();
+        this.color = utility.getPattern().color;
     }
 
 }

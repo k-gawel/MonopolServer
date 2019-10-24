@@ -43,12 +43,17 @@ public class PlayerLeaveService {
         if(game.currentTour != null && game.currentTour.player.equals(player))
             return;
 
-        if(game.players.size() <= 2)
+        if(game.players.size() <= 2) {
             abortGame(player);
+            return;
+        }
 
         setNextAdmin(game);
         sellAllPlayersProperties(player);
         game.players.remove(player);
+        game.board.get(player).removePlayer(player);
+
+        game.players.stream().map(p -> p.name).forEach(System.out::println);
 
         PlayerLeaveResponse response = new PlayerLeaveResponse(player, null, null, false);
         messageTemplate.sendMessage(response);
@@ -56,7 +61,7 @@ public class PlayerLeaveService {
 
 
     private void setNextAdmin(Game game) {
-        game.admin = game.players.get(1);
+        game.admin = game.players.get(0);
     }
 
 
@@ -75,7 +80,7 @@ public class PlayerLeaveService {
         players.remove(player);
         Player winner = players.isEmpty() ? null : players.get(0);
         Player loser  = player;
-
+        GameRegistry.games.remove(player.getGame());
         PlayerLeaveResponse response = new PlayerLeaveResponse(player, winner, loser, true);
         messageTemplate.sendMessage(response);
     }

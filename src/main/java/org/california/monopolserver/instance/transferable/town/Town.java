@@ -61,7 +61,6 @@ public class Town extends AbstractGameInstance implements Groupable, Chargeable,
 
     @Override
     public void transfer(Player sender, Player receiver) {
-
         if(!sender.properties.remove(this))
             throw new IllegalStateException("Unable to remove " + this.toString() + " from " + sender.toString() + " properties");
 

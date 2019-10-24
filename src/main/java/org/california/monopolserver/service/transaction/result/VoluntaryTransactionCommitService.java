@@ -9,7 +9,9 @@ public class VoluntaryTransactionCommitService {
 
 
     public Transaction getFinalTransaction(VoluntaryTransaction transaction) {
-        return transaction.isAccepted() ?
+        Boolean accepted = transaction.isAccepted();
+
+        return accepted == null || accepted ?
                 transaction : new VoluntaryTransaction(transaction);
     }
 

@@ -8,14 +8,14 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Objects;
 
-public class CardGroupPattern implements Compositable, LandablePattern {
+public class CardGroupPattern extends LandablePattern implements Compositable {
 
     private String name;
     private Collection<Surprisable> cards;
     public String description;
 
-
-    public CardGroupPattern(String name, String description) {
+    public CardGroupPattern(String name, String description, int[] color) {
+        super(color);
         this.name = name;
         this.description = description;
         this.cards = new HashSet<>();

@@ -14,6 +14,7 @@ public class TownDto extends TransferableDto {
     public int price;
     public String region;
     public String owner;
+    public int[] color;
     public Collection<ImprovementDto> improvements;
 
     public TownDto(Town town) {
@@ -26,6 +27,7 @@ public class TownDto extends TransferableDto {
         this.improvements = town.getComponents().stream()
                 .map(ImprovementDto::new)
                 .collect(Collectors.toSet());
+        this.color = town.getPattern().color;
     }
 
 }
